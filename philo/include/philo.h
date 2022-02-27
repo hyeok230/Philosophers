@@ -19,15 +19,15 @@
 ** =============================================================================
 */
 
+# define TRUE 1
+# define FALSE 0
+
 typedef struct s_philo
 {
     int id;
     int left_fork;
     int right_fork;
-    
-
-
-}   t_philo
+}   t_philo;
 
 typedef struct s_info
 {
@@ -36,6 +36,17 @@ typedef struct s_info
     int time_to_eat;
     int time_to_sleep;
     int must_eat_num;
-}   t_info
+}   t_info;
+
+/*
+** =============================================================================
+** ft_utils.c
+** =============================================================================
+*/
+
+int	ft_isdigit(char c);
+int	ft_isspace(char c);
+int	ft_atoi(const char *str);
+int ft_error(char *s);
 
 #endif

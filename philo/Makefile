@@ -16,39 +16,16 @@
 
 CC 			= gcc
 CFLAGS		= -Wall -Wextra -Werror
-NAME		= push_swap
+NAME		= philo
 # =============================================================================
 # File Variables
 # =============================================================================
 
 INCLUDE = -Iinclude/
 FOLDER	= ./srcs/
-D_SORT = ./sort/
-D_FUNCTION = ./function/
-D_UTILS = ./utils/
-D_STACK = ./stack/
 
 SRCS	= main.c\
-			$(D_UTILS)check_stack.c\
-			$(D_UTILS)util.c\
-			$(D_UTILS)ft_atoi.c\
-			$(D_UTILS)ft_split.c\
-			$(D_UTILS)ft_split2.c\
-			$(D_UTILS)print_error.c\
-			$(D_UTILS)free_stack.c\
-			$(D_UTILS)get_max_mid_min.c\
-			$(D_FUNCTION)ft_swap.c\
-			$(D_FUNCTION)ft_push.c\
-			$(D_FUNCTION)ft_rotate.c\
-			$(D_FUNCTION)ft_reverse_rotate.c\
-			$(D_SORT)a_to_b.c\
-			$(D_SORT)b_to_a.c\
-			$(D_SORT)sort_args_three_a.c\
-			$(D_SORT)sort_args_three_b.c\
-			$(D_SORT)sort_args_under_three.c\
-			$(D_SORT)sort_args_five.c\
-			$(D_STACK)linkeddeque.c\
-			$(D_STACK)linkeddeque2.c\
+			ft_utils.c\
 
 			
 
