@@ -5,49 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: junylee <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/09/28 17:04:14 by junylee           #+#    #+#              #
-#    Updated: 2021/10/21 17:35:56 by junylee          ###   ########.fr        #
+#    Created: 2022/05/08 17:01:04 by junylee           #+#    #+#              #
+#    Updated: 2022/05/08 17:01:08 by junylee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# =============================================================================
-# Command Variables
-# =============================================================================
-
-CC 			= gcc
-CFLAGS		= -Wall -Wextra -Werror
-NAME		= philo
-# =============================================================================
-# File Variables
-# =============================================================================
-
-INCLUDE = -Iinclude/
-FOLDER	= ./srcs/
-
-SRCS	= main.c\
-			ft_utils.c\
-
-			
-
-SOURCES =  $(addprefix $(FOLDER), $(SRCS))
-
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+NAME = philo
+SOURCES = behave.c check.c init.c main.c util.c thread.c ft_atoi.c
 OBJECTS = $(SOURCES:%.c=%.o)
-
-# =============================================================================
-# Target Generating
-# =============================================================================
-
 all: $(NAME)
-
-%.o: %.c
-	${CC} ${CFLAGS} $(INCLUDE) -c $< -o $@
 
 $(NAME): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJECTS)
 
 clean:
 	rm -f $(OBJECTS)
-	rm -f $(OBJECTS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
